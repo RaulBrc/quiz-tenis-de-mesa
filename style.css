@@ -1,12 +1,15 @@
+/* Fundo geral do quiz */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
+  background-color: #f5f0e1; /* bege */
   text-align: center;
   padding: 80px 20px;
+  color: #5a2d8c; /* violeta */
 }
 
+/* Título e perguntas */
 h1 {
-  color: #333;
+  color: #5a2d8c;
 }
 
 p {
@@ -14,30 +17,49 @@ p {
   margin-bottom: 30px;
 }
 
+/* Perguntas escondidas suavemente */
+.question {
+  transition: opacity 0.5s ease;
+}
+
+.question.hidden {
+  opacity: 0;
+  display: none;
+}
+
+/* Botões */
 button {
   display: block;
   width: 250px;
-  margin: 15px auto;
-  padding: 18px 0;
+  margin: 25px auto;
+  padding: 20px 0;
   font-size: 20px;
   cursor: pointer;
   border: none;
   border-radius: 12px;
-  background-color: #4CAF50;
-  color: white;
-  transition: background-color 0.3s;
+  background-color: #ffd500; /* amarelo */
+  color: #5a2d8c; /* violeta */
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #ffea70; /* amarelo mais claro */
+  transform: scale(1.05);
 }
 
+button:focus {
+  outline: 3px solid #5a2d8c; /* contorno violeta */
+  outline-offset: 3px;
+}
+
+/* Resultado final */
 #result {
   margin-top: 50px;
   font-size: 24px;
   font-weight: bold;
 }
 
+/* Botão do resultado */
 a button {
   margin-top: 30px;
 }
